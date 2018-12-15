@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课堂管理系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="page-header">
+    <h2>${round.name}</h2>
+    <h4>轮次设置</h4>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">讨论课</h3>
+    </div>
+    <div class="panel-body">
+        <!--<#list seminars as seminar>-->
+        <div>${seminar.name}</div>
+        <!--</#list>-->
+    </div>
+</div>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">成绩设置</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+            <span>展示:</span>
+            <span class="btn-group">
+            <button type="button" class="btn btn-default">平均分</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">平均分</a></li>
+                <li><a href="#">最高分</a></li>
+            </ul>
+        </span>
+        </div>
+        <div>
+            <span>提问:</span>
+            <span class="btn-group">
+            <button type="button" class="btn btn-default">平均分</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">平均分</a></li>
+                <li><a href="#">最高分</a></li>
+            </ul>
+        </span>
+        </div>
+        <div>
+            <span>报告:</span>
+            <span class="btn-group">
+            <button type="button" class="btn btn-default">平均分</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">平均分</a></li>
+                <li><a href="#">最高分</a></li>
+            </ul>
+        </span>
+        </div>
+    </div>
+</div>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">报名次数</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+            <span>小组:</span>
+            <span class="btn-group">
+            <button type="button" class="btn btn-default">平均分</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">平均分</a></li>
+                <li><a href="#">最高分</a></li>
+            </ul>
+        </span>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

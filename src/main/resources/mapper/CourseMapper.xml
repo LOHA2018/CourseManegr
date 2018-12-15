@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.loha.coursemanage.mapper.CourseMapper">
+    <select id="getAllCourseByUserId" resultType="Course">
+        select id,name,teacher_id as "teacherId"
+        from course
+        where teacher_id=#{id}
+    </select>
+</mapper>
