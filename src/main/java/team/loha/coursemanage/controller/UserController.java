@@ -35,12 +35,6 @@ public class UserController {
         String username=getUsername();
         User user=userMapper.getUserByAccount(username);
         List<Course> courses=courseMapper.getAllCourseByUserId(user.getId());
-//        Course course=new Course();
-//        course.setId(5);
-//        course.setName("123");
-//        course.setTeacherId(5);
-//        List<Course> courses=new ArrayList<>();
-//        courses.add(course);
         model.addAttribute("user",user);
         model.addAttribute("courses",courses);
         model.addAttribute("curUser",username);

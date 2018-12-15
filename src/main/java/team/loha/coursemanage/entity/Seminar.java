@@ -1,8 +1,17 @@
 package team.loha.coursemanage.entity;
 
-public class seminar {
+public class Seminar {
     long id;
     String name;
+    long courseId;
+
+    public long getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(long courseId) {
+        this.courseId = courseId;
+    }
 
     public long getId() {
         return id;
