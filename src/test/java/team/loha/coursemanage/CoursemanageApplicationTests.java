@@ -1,4 +1,4 @@
-package team.loha.demo;
+package team.loha.coursemanage;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
