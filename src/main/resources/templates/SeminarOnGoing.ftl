@@ -17,9 +17,9 @@
         <span class="glyphicon glyphicon-list" style="font-size: 20px; margin-left: 4px;"></span>
     </div>
     <ul class="list-group presentation-list" style="display: none">
-        <!--<#list presentations as presentation>-->
+        <#list presentations as presentation>
         <li class="list-group-item"><a>${presentation.name}</a></li>
-        <!--</#list>-->
+        </#list>
     </ul>
 </div>
 <ul class="nav nav-tabs" role="tablist">
@@ -56,7 +56,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">提问</a></li>
+                                <li><a class="attendance_question">提问</a></li>
                                 <li><a href="#">下组展示</a></li>
                             </ul>
                         </div>
@@ -70,9 +70,9 @@
 
     <ul class="list-group">
         <li class="list-group-item active">提问列表</li>
-        <!--<#list questions as question>-->
+        <#list questions as question>
         <li class="list-group-item">${question.student.name}</li>
-        <!--</#list>-->
+        </#list>
     </ul>
 </div>
 <div class="alert alert-danger alert-dismissible" role="alert" style="position: fixed; display: none; top:0; z-index: 11; width: 100%">
@@ -81,6 +81,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/sockjs-client/1.3.0/sockjs.min.js"></script>
 <script src="../js/alter.js"></script>
 <script src="../js/countdown.js"></script>
 <script src="../js/sidebar.js"></script>

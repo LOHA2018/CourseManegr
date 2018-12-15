@@ -6,4 +6,9 @@
         from seminar
         where course_id=#{id}
     </select>
+    <select id="getSeminarById" resultType="Seminar">
+        select id,name,course_id as "courseId"
+        from seminar
+        where id=#{id}
+    </select>
 </mapper>

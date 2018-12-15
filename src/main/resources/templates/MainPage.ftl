@@ -11,7 +11,6 @@
 <div class="content">
     <#list courses as course>
     <div class="list-group" id="${course.id}">
-
         <div data-toggle="collapse" data-parent="${course.id}" class="list-group-item collapse_trigger">
             ${course.name}
         </div>

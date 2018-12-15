@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface SeminarMapper {
     public List<Seminar> getAllSeminarByCourseId(long id);
+    public Seminar getSeminarById(long id);
 }

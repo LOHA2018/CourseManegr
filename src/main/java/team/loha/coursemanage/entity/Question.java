@@ -4,7 +4,7 @@ public class Question {
     long id;
     long teamId;
     long studentId;
-    long seminarId;
+    long attendanceId;
 
     public long getId() {
         return id;
@@ -30,11 +30,11 @@ public class Question {
         this.studentId = studentId;
     }
 
-    public long getSeminarId() {
-        return seminarId;
+    public long getAttendanceId() {
+        return attendanceId;
     }
 
-    public void setSeminarId(long seminarId) {
-        this.seminarId = seminarId;
+    public void setAttendanceId(long attendanceId) {
+        this.attendanceId = attendanceId;
     }
 }

@@ -39,5 +39,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin().defaultSuccessUrl("/zou")
                 .and()
                 .logout().permitAll();
+        http.csrf().disable();
     }
 }
