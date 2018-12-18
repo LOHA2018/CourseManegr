@@ -1,27 +1,23 @@
-var stompClient = null;
-
-//建议连接
-function connect() {
-    var socket = new SockJS('/seminarEndpoint');
-    stompClient = Stomp.over(socket);
-    stompClient.connect({}, function (frame) {
-        // setConnected(true);
-        console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/seminar', function (question) {
-            console.log(JSON.parse(question.body));
-        });
-    });
-}
-
-// 发送消息
-function sendName() {
-    stompClient.send("/app/question", {}, JSON.stringify({'studentId': 123,'attendanceId':123}));
-}
-
 $(function () {
-    connect();
 
     $(".attendance_question").click(function () {
-        sendName();
+        sendNotice();
     })
+
+    var sock = new SockJS("/endpointSeminar");
+    var stomp = Stomp.over(sock);
+    stomp.connect('guest', 'guest', function(frame) {
+        stomp.subscribe("/user/topic/seminar", function (datatest) {
+            console.log(datatest.body);
+        });
+    });
+// 发送消息
+    function sendQuestion() {
+        stomp.send("/app/question", {}, JSON.stringify({'studentId': 123,'attendanceId':123}));
+    }
+
+// 发送消息
+    function sendNotice() {
+        stomp.send("/app/choose", {}, "123");
+    }
 });
