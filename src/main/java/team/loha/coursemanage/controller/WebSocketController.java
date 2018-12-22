@@ -24,13 +24,23 @@ public class WebSocketController {
     @Autowired
     SimpMessagingTemplate messagingTemplate;
 
+    /**
+     * @Author: birden
+     * @Description: 广播，改路径字符串
+     * @Date: 2018/12/22 22:17
+     */
     @MessageMapping("/question")
-    @SendTo("/topic/seminar")
-    public String raiseQuestion(Question question)
+    public void raiseQuestion(String a)
     {
-        return "hello";
+        System.out.println("in");
+        messagingTemplate.convertAndSend("/topic"+"/123","hello");
     }
 
+    /**
+     * @Author: birden
+     * @Description: 点对点
+     * @Date: 2018/12/22 22:17
+     */
     @MessageMapping("/choose")
     public void handleRequest(Principal principal,String account){
         System.out.println(principal.getName());

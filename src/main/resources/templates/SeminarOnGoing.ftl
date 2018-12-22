@@ -42,7 +42,7 @@
                     <br/>
                     <br/>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Score" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control write-place" placeholder="Score" aria-describedby="basic-addon1">
                     </div>
                     <br/>
                     <p>说明</p>
